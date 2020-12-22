@@ -13,16 +13,21 @@ const test = document.getElementById('tested')
 function PHI(){
     axios.get('https://api.apify.com/v2/key-value-stores/lFItbkoNDXKeSWBBA/records/LATEST?disableRedirect=true')
     .then(data => {
-        setInterval(
-            inf.innerHTML = data.data.infected,
-            phi.innerHTML = data.data.country,
-            rev.innerHTML = data.data.recovered,
-            dead.innerHTML = data.data.deceased,
-            ac.innerHTML = data.data.activeCases,
-            unique.innerHTML = data.data.unique,
-            test.innerHTML = data.data.tested,
-            30000
-        )
+        setInterval(() => {
+            infec
+            revs
+            dead
+            acs
+            uniques
+            tests
+        }, 30000);
+
+        inf.innerHTML = infec.toLocaleString('en')
+        rev.innerHTML = revs.toLocaleString('en')
+        dead.innerHTML = deads.toLocaleString('en')
+        ac.innerHTML = acs.toLocaleString('en')
+        unique.innerHTML = uniques.toLocaleString('en')
+        test.innerHTML = tests.toLocaleString('en')
         source.innerHTML = "Source: "  + data.data.sourceUrl
     })
 }
